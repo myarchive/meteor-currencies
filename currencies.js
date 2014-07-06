@@ -197,7 +197,7 @@ if (Meteor.isClient) {
 	Meteor.subscribe('currencies');
 	setTimeout(function() {
 		Session.setDefault("curr", "USD");
-		Session.setDefault("unit", "grams");
+		Session.setDefault("units", "ounces");
 	}, 1);
 }
 
@@ -279,7 +279,7 @@ this.currDropdown = function(id,cls) {
 this.unitRadio = function(id) {
 	if (!id) { id = "units"; }
 	
-	if (Session.get('units') === "ounces") { c1 = ""; c2 = "checked"; }
+	if (Session.get("units") === "ounces") { c1 = ""; c2 = "checked"; }
 	else { c1 = "checked"; c2 = ""; }
 	
 	var html = "<label class='radio-inline' for='"+id+"-grams'><input type='radio' name='"+id+"' id='"+id+"-grams' value='grams' "+c1+">grams</label>";
