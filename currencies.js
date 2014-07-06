@@ -198,7 +198,7 @@ if (Meteor.isClient) {
 	setTimeout(function() {
 		Session.setDefault("curr", "USD");
 		Session.setDefault("units", "ounces");
-	}, 1);
+	}, 100);
 }
 
 
