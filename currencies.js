@@ -211,7 +211,7 @@ this.currValue = function(curr) {
 	else { return data.rates[curr]; }
 };
 
-this.gold = function(curr, unit) {
+this.getGold = function(curr, unit) {
 	if (!curr) { curr = "USD"; }
 	if (!unit) { unit = "ounces"; }
 	
@@ -222,7 +222,7 @@ this.gold = function(curr, unit) {
 	else { return rate / gval / 31.1034768; }
 };
 
-this.silver = function(curr, unit) {
+this.getilver = function(curr, unit) {
 	if (!curr) { curr = "USD"; }
 	if (!unit) { unit = "ounces"; }
 	
@@ -233,12 +233,12 @@ this.silver = function(curr, unit) {
 	else { return rate / gval / 31.1034768; }
 };
 
-this.nisab = function(curr, metal) {
+this.getNisab = function(curr, metal) {
 	if (!curr) { curr = "USD"; }
 	if (!metal) { metal = "low"; }
 	
-	var ngld = gold(curr,"g") * 85;
-	var nslv = silver(curr,"g") * 595;
+	var ngld = getGold(curr,"grams") * 85;
+	var nslv = getSilver(curr,"grams") * 595;
 	
 	if (metal === "gold") { return ngld; }
 	if (metal === "silver") { return nslv; }
@@ -289,7 +289,7 @@ this.unitRadio = function(id) {
 
 this.showNisab = function() {
 	var curr = Session.get("curr");
-	return formatCurr(nisab(curr),curr);
+	return formatCurr(getNisab(curr),curr);
 };
 
 this.showGold = function() {
@@ -297,7 +297,7 @@ this.showGold = function() {
 	var unit = Session.get("units");
 	var suff = (unit === "ounces") ? " / oz" : " / g";
 	
-	return formatCurr(gold(curr,unit),curr) + suff;
+	return formatCurr(getGold(curr,unit),curr) + suff;
 };
 
 this.showSilver = function() {
@@ -305,5 +305,5 @@ this.showSilver = function() {
 	var unit = Session.get("units");
 	var suff = (unit === "ounces") ? " / oz" : " / g";
 	
-	return formatCurr(silver(curr,unit),curr) + suff;
+	return formatCurr(getSilver(curr,unit),curr) + suff;
 };
