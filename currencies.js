@@ -222,7 +222,7 @@ this.getGold = function(curr, unit) {
 	else { return rate / gval / 31.1034768; }
 };
 
-this.getilver = function(curr, unit) {
+this.getSilver = function(curr, unit) {
 	if (!curr) { curr = "USD"; }
 	if (!unit) { unit = "ounces"; }
 	
