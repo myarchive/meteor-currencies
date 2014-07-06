@@ -195,8 +195,10 @@ if (Meteor.isServer) {
 
 if (Meteor.isClient) {
 	Meteor.subscribe('currencies');
-	Session.setDefault("curr", "USD");
-	Session.setDefault("unit", "grams");
+	setTimeout(function() {
+		Session.setDefault("curr", "USD");
+		Session.setDefault("unit", "grams");
+	}, 1);
 }
 
 
