@@ -1,4 +1,4 @@
-###Currencies 1.0 - Meteor Smart Package
+###Currencies 2.1 - Meteor Smart Package
 
 This smart package keeps a running collection of currency exchange rates and offers
 functions to convert and display exchange rates, gold/silver rates (grams and ounces),
