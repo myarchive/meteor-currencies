@@ -1,8 +1,0 @@
-{
-    "name": "currencies",
-    "description": "Currencies smart package",
-    "homepage": "https://github.com/alisalaah/meteor-currencies",
-    "author": "Ali Camarata  (http://alicamarata.com)",
-    "version": "1.0.5",
-    "git": "https://github.com/alisalaah/meteor-currencies.git"
-}
