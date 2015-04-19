@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'alisalaah:currencies',
-	summary: 'Meteor package to use live currencies and exchange rates in your app',
-	version: '2.1.1',
+	summary: 'Live updated currencies database',
+	version: '2.1.2',
 	git: 'https://github.com/alisalaah/meteor-currencies.git'
 });
 
