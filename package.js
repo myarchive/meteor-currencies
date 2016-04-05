@@ -9,6 +9,7 @@ Package.onUse(function(api) {
 	api.versionsFrom('METEOR@0.9.2');
 	api.use(['http'], 'server');
 	api.use(['ui'], 'client');
+	api.use(['session'], 'client');
 	
     api.add_files("currencies.js");
 });
